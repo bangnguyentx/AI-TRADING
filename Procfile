@@ -1,6 +1,6 @@
 # =============================================================================
 # FILE: Procfile
-# Render deployment configuration
+# Render deployment configuration - ĐÃ SỬA
 # =============================================================================
 
-web: gunicorn main:app --workers 1 --bind 0.0.0.0:$PORT --timeout 120 --log-level info
+web: python main.py
