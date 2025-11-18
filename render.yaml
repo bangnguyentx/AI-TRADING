@@ -1,0 +1,24 @@
+# =============================================================================
+# FILE: render.yaml
+# Render Blueprint for automated deployment
+# =============================================================================
+
+services:
+  - type: web
+    name: trading-bot
+    env: python
+    plan: free
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: TOKEN
+        value: 8505137563:AAGuvTtObBIILgjsUnP8v-8EsBRKn2T3h4E
+      - key: ADMIN_ID
+        value: 7760459637
+      - key: INTERVAL
+        value: 15m
+      - key: LIMIT
+        value: 300
+      - key: PORT
+        value: 10000
